@@ -23,6 +23,11 @@
                 <span>SuperHandy</span>
             </div>
 
+            <!-- Botão Menu Mobile -->
+            <button class="mobile-menu-btn" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
             <nav aria-label="Navegação principal">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -49,19 +54,22 @@
     <main class="paginas">
         <h1>Cadastro</h1>
         <form id="cadastro-form">
-            <select id="tipoUsuario" required>
-                <option value="">Tipo de cadastro</option>
-                <option value="usuario">Usuário</option>
-                <option value="prestador">Prestador de serviço</option>
-            </select> <br />
 
-            <input type="text" id="nome" required placeholder="Nome completo"> <br />
-            <input type="date" id="nascimento" required placeholder="Data de nascimento"> <br />
-            <input type="text" id="cpf" required placeholder="CPF"> <br />
-            <input type="text" id="telefone" required placeholder="Telefone"> <br />
-            <input type="email" id="email" required placeholder="E-mail"><br />
-            <input type="password" id="senha" required placeholder="Senha">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <select id="tipoUsuario" required>
+                    <option value="">Tipo de cadastro</option>
+                    <option value="usuario">Usuário</option>
+                    <option value="prestador">Prestador de serviço</option>
+                </select> <br />
 
+                <input type="text" id="nome" required placeholder="Nome completo"> <br />
+                <input type="date" id="nascimento" required placeholder="Data de nascimento"> <br />
+                <input type="text" id="cpf" required placeholder="CPF"> <br />
+                <input type="text" id="telefone" required placeholder="Telefone"> <br />
+                <input type="email" id="email" required placeholder="E-mail"><br />
+                <input type="password" id="senha" required placeholder="Senha">
+            </fieldset>
             <fieldset>
                 <legend>Endereço</legend>
                 <input type="text" placeholder="Cidade" id="cidade" required> <br />
