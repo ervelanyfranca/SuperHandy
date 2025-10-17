@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SuperHandy — Marido de Aluguel</title>
+    <title>Contato - SuperHandy</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -12,7 +12,7 @@
 
 <body>
 
-    <body class="home"></body>
+    <body class="page"></body>
     <!-- Cabeçalho -->
     <header>
         <div class="container header-inner">
@@ -23,16 +23,11 @@
                 <span>SuperHandy</span>
             </div>
 
-            <!-- Botão Menu Mobile -->
-            <button class="mobile-menu-btn" aria-label="Abrir menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
             <nav aria-label="Navegação principal">
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="cadastro.html">Cadastro</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="contato.html" class="active">Contato</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
                 </ul>
@@ -51,50 +46,31 @@
         </div>
     </header>
 
-    <!-- Cabeçalho Promocional -->
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1>SuperHandy — Seu marido de aluguel</h1>
-            <p>Problema em casa? A gente resolve pra você!</p>
-        </div>
-    </section>
+    <main class="paginas">
+        <div class="container">
+            <h2>Entre em Contato</h2>
 
-    <!-- Serviços -->
-    <main>
-        <h2>Escolha um serviço</h2>
-        <div class="services-grid">
-            <div class="service-item">
-                <button class="service-btn"><i class="fa-solid fa-screwdriver-wrench"></i><span>Conserto</span></button>
+            <!-- Formulário para Desenvolvedores -->
+            <div class="contact-form">
+                <h3>📧 Mensagem para os Desenvolvedores</h3>
+                <form id="contact-form">
+                    <input type="email" placeholder="Seu email" required><br />
+                    <textarea placeholder="Sua mensagem para a equipe de desenvolvimento..." rows="5"
+                        required></textarea> <br />
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
             </div>
-            <div class="service-item">
-                <button class="service-btn"><i class="fa-solid fa-couch"></i><span>Montagem</span></button>
-            </div>
-            <div class="service-item">
-                <button class="service-btn"><i class="fa-solid fa-truck"></i><span>Transporte</span></button>
-            </div>
-            <div class="service-item">
-                <button class="service-btn"><i class="fa-solid fa-bolt"></i><span>Elétrica</span></button>
-            </div>
-            <div class="service-item">
-                <button class="service-btn"><i class="fa-solid fa-faucet"></i><span>Hidráulica</span></button>
-            </div>
-            <div class="service-item">
-                <button class="service-btn"><i class="fa-solid fa-paint-roller"></i><span>Pintura</span></button>
-            </div>
-            <div class="service-item">
-                <button class="service-btn"><i class="fa-solid fa-broom"></i><span>Limpeza</span></button>
-            </div>
-            <div class="service-item">
-                <button class="service-btn"><i class="fa-solid fa-seedling"></i><span>Jardim</span></button>
-            </div>
-            <div class="service-item">
-                <button class="service-btn"><i class="fa-solid fa-tv"></i><span>SmartTech</span></button>
-            </div>
-        </div>
 
-        <!-- Botão para sugerir categorias -->
-        <div class="suggest-category">
-            <a href="contato.html">+ Sugerir nova categoria</a>
+            <!-- Formulário para Sugerir Categoria -->
+            <div class="contact-form">
+                <h3>💡 Sugerir Nova Categoria</h3>
+                <form id="suggestCategoryForm">
+                    <input type="text" placeholder="Nome da nova categoria" required> <br />
+                    <textarea placeholder="Descreva por que essa categoria seria útil..." rows="5"
+                        required></textarea><br />
+                    <button type="submit">Enviar Sugestão</button>
+                </form>
+            </div>
         </div>
     </main>
 

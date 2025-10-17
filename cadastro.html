@@ -4,53 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro — SuperHandy</title>
+    <title>SuperHandy — Marido de Aluguel</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+
+    <body class="page"></body>
+    <!-- Cabeçalho -->
     <header>
         <div class="container header-inner">
             <div class="logo">
-                <a href="index.html"><img src="img/logo.jpg" alt="Logo"></a>
+                <a href="index.html">
+                    <img src="img/logo.jpg" alt="Logo SuperHandy">
+                </a>
                 <span>SuperHandy</span>
+            </div>
+
+            <nav aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cadastro.html" class="active">Cadastro</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <form class="search-box" role="search" aria-label="Busca">
+                    <input type="search" placeholder="Pesquisar..." name="q" aria-label="Pesquisar">
+                    <button type="submit" aria-label="Pesquisar"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+
+                <div class="login-btn">
+                    <a href="#" id="loginBtn"><i class="fa-solid fa-user"></i> <span id="loginText">Entrar</span></a>
+                </div>
             </div>
         </div>
     </header>
 
-    <main>
+    <main class="paginas">
         <h1>Cadastro</h1>
-        <form id="cadastroForm">
-            <label>Tipo de cadastro:</label>
+        <form id="cadastro-form">
             <select id="tipoUsuario" required>
-                <option value="">Selecione</option>
+                <option value="">Tipo de cadastro</option>
                 <option value="usuario">Usuário</option>
                 <option value="prestador">Prestador de serviço</option>
-            </select>
+            </select> <br />
 
-            <label>Nome completo:</label>
-            <input type="text" id="nome" required>
-            <label>Data de nascimento:</label>
-            <input type="date" id="nascimento" required>
-            <label>CPF:</label>
-            <input type="text" id="cpf" required>
-            <label>Telefone:</label>
-            <input type="text" id="telefone" required>
-            <label>Email:</label>
-            <input type="email" id="email" required>
-            <label>Senha:</label>
-            <input type="password" id="senha" required>
+            <input type="text" id="nome" required placeholder="Nome completo"> <br />
+            <input type="date" id="nascimento" required placeholder="Data de nascimento"> <br />
+            <input type="text" id="cpf" required placeholder="CPF"> <br />
+            <input type="text" id="telefone" required placeholder="Telefone"> <br />
+            <input type="email" id="email" required placeholder="E-mail"><br />
+            <input type="password" id="senha" required placeholder="Senha">
 
             <fieldset>
                 <legend>Endereço</legend>
-                <input type="text" placeholder="Cidade" id="cidade" required>
-                <input type="text" placeholder="Estado" id="estado" required>
-                <input type="text" placeholder="CEP" id="cep" required>
-                <input type="text" placeholder="Rua" id="rua" required>
-                <input type="text" placeholder="Bairro" id="bairro" required>
-                <input type="text" placeholder="Número" id="numero" required>
-                <input type="text" placeholder="Complemento" id="complemento">
+                <input type="text" placeholder="Cidade" id="cidade" required> <br />
+                <input type="text" placeholder="Estado" id="estado" required> <br />
+                <input type="text" placeholder="CEP" id="cep" required> <br />
+                <input type="text" placeholder="Rua" id="rua" required><br />
+                <input type="text" placeholder="Bairro" id="bairro" required><br />
+                <input type="text" placeholder="Número" id="numero" required><br />
+                <input type="text" placeholder="Complemento" id="complemento"><br />
             </fieldset>
 
             <div id="prestadorExtra" style="display:none;">
@@ -63,6 +83,43 @@
             <button type="submit">Cadastrar</button>
         </form>
     </main>
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 SuperHandy. Todos os direitos reservados.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </footer>
+
+    <!-- Modal de Login CORRIGIDO -->
+    <div id="loginModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModal">&times;</button>
+            <h2>Entrar na SuperHandy</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email:</label>
+                    <input id="loginEmail" type="email" required placeholder="seu@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="loginSenha">Senha:</label>
+                    <input id="loginSenha" type="password" required placeholder="Sua senha">
+                </div>
+
+                <button type="submit" class="btn-primary">Entrar</button>
+            </form>
+
+            <div class="modal-links">
+                <a href="#" class="forgot-password">Esqueceu a senha?</a>
+                <span>|</span>
+                <a href="cadastro.html" class="register-link">Cadastre-se</a>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

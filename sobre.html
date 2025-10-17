@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SuperHandy — Marido de Aluguel</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome -->
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+
+    <body class="page"></body>
     <!-- Cabeçalho -->
     <header>
         <div class="container header-inner">
@@ -23,12 +25,11 @@
 
             <nav aria-label="Navegação principal">
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="#">Cadastro</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="sobre.html" class="active">Sobre</a></li>
                 </ul>
             </nav>
 
@@ -45,14 +46,7 @@
         </div>
     </header>
 
-    <section class="banner">
-        <div class="container">
-            <h1>Bem-vindo à SuperHandy</h1>
-            <p>Seu marido de aluguel — serviços rápidos e confiáveis</p>
-        </div>
-    </section>
-
-    <main class="sobre">
+    <main class="paginas">
         <h1>Sobre a SuperHandy</h1>
         <p>A SuperHandy busca levar praticidade para pessoas com rotinas cheias ou que não têm tempo ou conhecimento
             para realizar tarefas específicas.</p>
@@ -72,6 +66,33 @@
             <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
     </footer>
+
+    <!-- Modal de Login CORRIGIDO -->
+    <div id="loginModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModal">&times;</button>
+            <h2>Entrar na SuperHandy</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email:</label>
+                    <input id="loginEmail" type="email" required placeholder="seu@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="loginSenha">Senha:</label>
+                    <input id="loginSenha" type="password" required placeholder="Sua senha">
+                </div>
+
+                <button type="submit" class="btn-primary">Entrar</button>
+            </form>
+
+            <div class="modal-links">
+                <a href="#" class="forgot-password">Esqueceu a senha?</a>
+                <span>|</span>
+                <a href="cadastro.html" class="register-link">Cadastre-se</a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

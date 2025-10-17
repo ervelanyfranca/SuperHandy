@@ -12,7 +12,7 @@
 
 <body>
 
-    <body class="home"></body>
+    <body class="page"></body>
     <!-- Cabeçalho -->
     <header>
         <div class="container header-inner">
@@ -23,17 +23,12 @@
                 <span>SuperHandy</span>
             </div>
 
-            <!-- Botão Menu Mobile -->
-            <button class="mobile-menu-btn" aria-label="Abrir menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
             <nav aria-label="Navegação principal">
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="cadastro.html">Cadastro</a></li>
                     <li><a href="contato.html">Contato</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="faq.html" class="active">FAQ</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
                 </ul>
             </nav>
@@ -45,57 +40,54 @@
                 </form>
 
                 <div class="login-btn">
-                    <a href="#" id="loginBtn"><i class="fa-solid fa-user"></i> <span id="loginText">Entrar</span></a>
+                    <a href="#"><i class="fa-solid fa-user"></i> Entrar</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Cabeçalho Promocional -->
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1>SuperHandy — Seu marido de aluguel</h1>
-            <p>Problema em casa? A gente resolve pra você!</p>
-        </div>
-    </section>
 
-    <!-- Serviços -->
-    <main>
-        <h2>Escolha um serviço</h2>
-        <div class="services-grid">
-            <div class="service-item">
-                <button class="service-btn"><i class="fa-solid fa-screwdriver-wrench"></i><span>Conserto</span></button>
-            </div>
-            <div class="service-item">
-                <button class="service-btn"><i class="fa-solid fa-couch"></i><span>Montagem</span></button>
-            </div>
-            <div class="service-item">
-                <button class="service-btn"><i class="fa-solid fa-truck"></i><span>Transporte</span></button>
-            </div>
-            <div class="service-item">
-                <button class="service-btn"><i class="fa-solid fa-bolt"></i><span>Elétrica</span></button>
-            </div>
-            <div class="service-item">
-                <button class="service-btn"><i class="fa-solid fa-faucet"></i><span>Hidráulica</span></button>
-            </div>
-            <div class="service-item">
-                <button class="service-btn"><i class="fa-solid fa-paint-roller"></i><span>Pintura</span></button>
-            </div>
-            <div class="service-item">
-                <button class="service-btn"><i class="fa-solid fa-broom"></i><span>Limpeza</span></button>
-            </div>
-            <div class="service-item">
-                <button class="service-btn"><i class="fa-solid fa-seedling"></i><span>Jardim</span></button>
-            </div>
-            <div class="service-item">
-                <button class="service-btn"><i class="fa-solid fa-tv"></i><span>SmartTech</span></button>
-            </div>
+    <!-- Conteúdo principal (FAQ) -->
+    <main class="paginas">
+        <h1>Perguntas Frequentes</h1>
+
+        <div class="faq-item">
+            <div class="faq-question">Como funciona a SuperHandy?</div>
+            <div class="faq-answer">A SuperHandy conecta clientes a profissionais especializados em pequenos reparos,
+                montagens, instalações e outros serviços domésticos. Você escolhe o serviço, solicita um orçamento e
+                recebe atendimento de um profissional de confiança.</div>
         </div>
 
-        <!-- Botão para sugerir categorias -->
-        <div class="suggest-category">
-            <a href="contato.html">+ Sugerir nova categoria</a>
+        <div class="faq-item">
+            <div class="faq-question">Como faço para solicitar um serviço?</div>
+            <div class="faq-answer">Basta acessar a página inicial, escolher a categoria do serviço e clicar em
+                “Solicitar Orçamento”. Um profissional entrará em contato para confirmar os detalhes e valores.</div>
         </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Os profissionais são verificados?</div>
+            <div class="faq-answer">Sim. Todos os profissionais passam por uma verificação de identidade e histórico
+                antes de serem aceitos na plataforma, garantindo mais segurança aos clientes.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Como é feito o pagamento?</div>
+            <div class="faq-answer">O pagamento é feito diretamente pela plataforma, garantindo segurança para ambas as
+                partes. Aceitamos cartões, Pix e boleto.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Posso avaliar o profissional depois do serviço?</div>
+            <div class="faq-answer">Sim! Após a conclusão do serviço, você pode deixar uma avaliação e um comentário
+                sobre o atendimento e a qualidade do trabalho.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">E se o serviço não for realizado corretamente?</div>
+            <div class="faq-answer">Entre em contato com o nosso suporte informando o ocorrido. A SuperHandy fará a
+                mediação para garantir que o problema seja resolvido da melhor forma possível.</div>
+        </div>
+
     </main>
 
     <!-- Rodapé -->
@@ -134,6 +126,7 @@
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
