@@ -682,6 +682,10 @@ footer .social-icons a:hover {
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
 }
 
+.faq-item.active .faq-answer {
+    display: block;
+}
+
 .faq-question {
     background-color: #e8552c;
     color: #fff;

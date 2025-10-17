@@ -132,6 +132,25 @@
         </div>
     </div>
 
+
+
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const allItems = document.querySelectorAll('.faq-item');
+
+                // Fecha todos os outros
+                allItems.forEach(i => {
+                    if (i !== item) i.classList.remove('active');
+                });
+
+                // Alterna o atual
+                item.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
